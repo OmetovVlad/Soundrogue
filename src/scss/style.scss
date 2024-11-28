@@ -1,0 +1,91 @@
+// Normalize.css
+@import "../../node_modules/normalize.css/normalize";
+// Bootstrap
+@import '../../node_modules/bootstrap/scss/bootstrap-grid';
+
+// Шрифты
+// Удалить файл fonts.scss, если произошли какие-то изменения со шрифтами
+@import "fonts";
+
+// Переменны (цвета, скорость transition и пр)
+@import "_variables";
+
+// Элементы интерфейса
+@import "_ui";
+
+@import "_header";
+
+@import "_hello";
+@import "_efficiently";
+@import "_key_features";
+@import "_created_by";
+@import "_video";
+@import "_kickstarter";
+
+@import "_about_page";
+@import "_privacy_page";
+
+@import "_footer";
+
+*{
+  outline: none;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 360px;
+  overflow-x: hidden;
+  font-family: $main_font;
+  background-color: #0a0a0a;
+  color: $text-main-color;
+  main {
+    flex: 1 0 auto;
+    padding: 0;
+  }
+}
+
+.container {
+  padding-right: var(--bs-gutter-x);
+  padding-left: var(--bs-gutter-x);
+  @media (min-width: 1400px) {
+    max-width: 1440px;
+  }
+}
+
+.title {
+  text-align: center;
+  h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.5;
+    @media (min-width: 992px) {
+      font-size: 32px;
+    }
+  }
+}
+
+.title-mini {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #999;
+  @media (min-width: 1200px) {
+    font-size: 20px;
+  }
+}
+
+.text-gradient {
+  background-image: linear-gradient(to right, #ad5ae0, #338fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

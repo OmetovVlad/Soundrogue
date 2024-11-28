@@ -1,0 +1,291 @@
+.link {
+  display: flex;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  border-bottom: solid 1px #fff;
+}
+
+.button-white-bordered {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
+  align-items: center;
+  height: 40px;
+  padding: 0 24px;
+  border-radius: 24px;
+  border: solid 1px $text-main-color;
+  text-decoration: none;
+  line-height: 1;
+  font-size: 16px;
+  color: $text-main-color;
+  overflow: hidden;
+  span {
+    position: relative;
+    z-index: 1;
+    margin-top: 2px;
+    mix-blend-mode: difference;
+  }
+  img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    height: 16px;
+    mix-blend-mode: difference;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 38px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 38px;
+    background-color: $text-main-color;
+    z-index: 0;
+    transition: all $animation_speed;
+  }
+
+  @media (pointer: fine) {
+    &:hover {
+      &:after {
+        top: 0;
+      }
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
+    border-color: $disabled-color;
+    color: $disabled-color;
+  }
+}
+
+.input {
+  &_range {
+    width: 100%;
+    max-width: 320px;
+
+    &__slider {
+      position: relative;
+      width: 100%;
+    }
+
+    &__styled_slider {
+      height: 24px;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    &__dot {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 24px;
+      border: 1px solid #fff;
+      background: #202020;
+      border-radius: 24px;
+      position: absolute;
+      top: 0;
+      margin-left: -40px;
+      z-index: 1;
+      transition: background $animation_speed;
+      img {
+
+      }
+    }
+
+    &__line {
+      position: relative;
+      width: calc(100% + 80px);
+      height: 1px;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #fff 50%, rgba(255, 255, 255, 0));
+      border-radius: 8px;
+      opacity: 0.6;
+      z-index: 0;
+      margin-left: -40px;
+      margin-right: -40px;
+    }
+
+    &__input {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 24px;
+      width: 100%;
+      margin: 0;
+      border: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+  }
+}
+
+.nav-scroll {
+  @media (pointer: fine) {
+    &:hover {
+      & .input_range__dot {
+        background: #333;
+      }
+    }
+  }
+}
+
+.shine-card {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+  padding: 60px 24px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #0a0a0a;
+  @media (min-width: 992px) {
+    background-color: #000000;
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center top;
+    opacity: 0.5;
+    transition: all $animation_speed;
+  }
+  @media (pointer: fine) {
+    &:hover {
+      &:after {
+        top: 0;
+        opacity: 1;
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    padding: 120px 80px;
+  }
+  & > * {
+    z-index: 1;
+  }
+  .title-card {
+    margin-bottom: 24px;
+    span {
+      font-size: 32px;
+      font-weight: bold;
+      line-height: 1.5;
+      color: #fff;
+    }
+  }
+  .text {
+    padding-bottom: 48px;
+    span {
+      display: block;
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: center;
+      color: #999;
+    }
+  }
+  img {
+    display: block;
+  }
+}
+
+.input-text {
+  padding: 7px 24px;
+  border-radius: 24px;
+  border: solid 1px #999;
+  background-color: initial;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  font-family: $main_font;
+  transition: all $animation_speed;
+  @media (pointer: fine) {
+    &:hover {
+      border-color: #ccc;
+    }
+  }
+  &:focus {
+    border-color: #ccc;
+  }
+  & + .input-error {
+    position: absolute;
+    top: 44px;
+    left: 0;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #ff3336;
+    opacity: 0;
+    pointer-events: none;
+    transition: all $animation_speed;
+  }
+  //&:required:invalid:not(:focus) {
+  //  border-color: #ff3336;
+  //  & + .input-error {
+  //    opacity: 1;
+  //  }
+  //}
+}
+
+.button {
+  position: relative;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 24px;
+  background-image: linear-gradient(to right, #ad5ae0, #338fff);
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+  font-family: $main_font;
+  color: #fff;
+  transition: all $animation_speed;
+  cursor: pointer;
+  overflow: hidden;
+  span {
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-image: linear-gradient(to right, #b570e0, #4d9dff);
+    transition: all $animation_speed;
+    opacity: 0;
+  }
+  @media (pointer: fine) {
+    &:hover {
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+}

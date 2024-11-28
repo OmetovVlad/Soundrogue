@@ -1,0 +1,22 @@
+.footer {
+  padding: 24px 0;
+  flex: 0 0 auto;
+  .company_data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    .name {
+      font-weight: bold;
+      color: #fff;
+    }
+    & * {
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: center;
+      color: #999;
+      text-decoration: none;
+    }
+  }
+}

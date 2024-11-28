@@ -1,0 +1,135 @@
+.cards-section {
+  padding: 24px 0;
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+    @media (min-width: 992px) {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+    }
+  }
+
+  &--about-page {
+    .grid-container {
+      @media (min-width: 992px) {
+        grid-template-columns: 1fr;
+      }
+      #subscribe {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        .text {
+          max-width: 526px;
+        }
+      }
+    }
+  }
+}
+
+#subscribe,
+#software {
+  .shine-card {
+    height: 100%;
+  }
+}
+
+#subscribe {
+  .shine-card {
+    transition: background 0.15s;
+    &:after {
+      background-image: url('/img/subscription-bg-hovered.png');
+    }
+
+    .subscribe-form {
+      width: 100%;
+      max-width: 400px;
+      position: relative;
+      .input-text {
+        width: 100%;
+        padding-right: 132px;
+        @media (max-width: 575px) {
+          padding-right: 24px;
+          text-align: center;
+        }
+      }
+      .input-error {
+        @media (max-width: 575px) {
+          right: 0;
+        }
+      }
+      .button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        @media (max-width: 575px) {
+          margin-top: 24px;
+          position: relative;
+        }
+      }
+      & form:invalid .button {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+    }
+  }
+}
+#software {
+  .shine-card {
+    &:after {
+      background-image: url('/img/software-bg-hovered.png');
+    }
+  }
+}
+
+#kickstarter {
+  @media (min-width: 992px) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .shine-card {
+    &:after {
+      background-image: url('/img/kickstarter-bg-hovered.png');
+    }
+
+    .full-card-clicked {
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    .title-card {
+      pointer-events: none;
+    }
+
+    .kickstarter-logo {
+      pointer-events: none;
+      position: relative;
+      img {
+        display: block;
+        transition: all $animation_speed;
+        max-width: 100%;
+        &.hovered {
+          position: absolute;
+          top: 0;
+          opacity: 0;
+        }
+      }
+    }
+    @media (pointer: fine) {
+      &:hover {
+        .kickstarter-logo {
+          img {
+            &.hovered {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

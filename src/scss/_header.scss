@@ -1,0 +1,68 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 78px;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  @media (max-width: 991px) {
+    height: 56px;
+  }
+  .container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+      a {
+        display: block;
+        text-decoration: none;
+      }
+      img {
+        display: block;
+        width: 158px;
+        height: 54px;
+        @media (max-width: 991px) {
+          width: auto;
+          height: 32px;
+        }
+      }
+    }
+    .menu {
+      display: flex;
+      flex-wrap: nowrap;
+      @media (max-width: 991px) {
+        display: none;
+      }
+      a {
+        display: block;
+        padding: 28px 20px;
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 1;
+        color: $text-main-color;
+        transition: all $animation_speed;
+      }
+
+      @media (pointer: fine) {
+        &:hover {
+          a {
+            opacity: 0.5;
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    .support-us {
+      @media (max-width: 991px) {
+        display: none;
+      }
+    }
+  }
+
+}

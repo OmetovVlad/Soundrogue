@@ -1,0 +1,116 @@
+#hello {
+  display: flex;
+  align-items: center;
+  padding: 158px 0 84px;
+  min-height: 100vh;
+  background-image: radial-gradient(circle at 50% 100%, rgba(158, 0, 255, 0.2), rgba(158, 0, 255, 0) 37%), linear-gradient(to bottom, #0a0a0a, #0a0a0a);
+  .name {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    @media (min-width: 992px) {
+      margin-bottom: 80px;
+    }
+    h1 {
+      display: block;
+      font-size: 62px;
+      font-weight: bold;
+      line-height: 0.7;
+      vertical-align: middle;
+      letter-spacing: 0.3em;
+      text-align: justify;
+      text-align-last: justify;
+      -ms-text-align-last: justify;
+      margin: 0 -0.3em 0 0;
+      @media (min-width: 1400px) {
+        font-size: 260px;
+      }
+      @media (min-width: 1200px) {
+        font-size: 220px;
+      }
+      @media (min-width: 992px) {
+        font-size: 180px;
+      }
+      @media (min-width: 768px) {
+        font-size: 130px;
+      }
+      @media (min-width: 576px) {
+        font-size: 90px;
+      }
+    }
+    .circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: #338fff;
+      @media (min-width: 1400px) {
+        width: 140px;
+        height: 140px;
+      }
+      @media (min-width: 1200px) {
+        width: 120px;
+        height: 120px;
+      }
+      @media (min-width: 992px) {
+        width: 100px;
+        height: 100px;
+      }
+      @media (min-width: 768px) {
+        width: 76px;
+        height: 76px;
+      }
+      @media (min-width: 576px) {
+        width: 55px;
+        height: 55px;
+      }
+    }
+  }
+  .render {
+    width: 100%;
+    position: relative;
+    margin-bottom: 60px;
+    @media (min-width: 992px) {
+      margin-bottom: 80px;
+    }
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .descriptions {
+    display: block;
+    @media (min-width: 992px) {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+    .left {
+      margin-bottom: 24px;
+      @media (min-width: 992px) {
+        width: 293px;
+        margin-bottom: 0;
+      }
+      b {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.5;
+        color: #fff;
+        @media (min-width: 992px) {
+          font-size: 20px;
+        }
+      }
+    }
+    .right {
+      @media (min-width: 992px) {
+        width: 569px;
+      }
+      span {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #999;
+      }
+    }
+  }
+}
