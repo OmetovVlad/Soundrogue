@@ -1,0 +1,11 @@
+.to-top {
+  opacity: 0; /* Элементы скрыты */
+  transform: translateY(-50px); /* Смещены вверх */
+  will-change: transform, opacity; /* Оптимизация для плавности */
+}
+
+.to-animate {
+  opacity: 0; /* Изначально текст невидим */
+  transform: translateY(20px); /* Смещен вниз */
+  will-change: transform, opacity; /* Оптимизация для анимации */
+}

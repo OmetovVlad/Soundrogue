@@ -1,4 +1,5 @@
 import * as functions from "./modules/functions.js";
+import "./modules/animation.js";
 
 // functions.isWebp();
 functions.range();

@@ -21,6 +21,8 @@
   "homepage": "",
   "dependencies": {
     "bootstrap": "^5.2.3",
+    "greensock": "^1.20.2",
+    "gsap": "^3.12.5",
     "gulp-cli": "^2.3.0",
     "normalize.css": "^8.0.1",
     "slick-carousel": "^1.8.1"
