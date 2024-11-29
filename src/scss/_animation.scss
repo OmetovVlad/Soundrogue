@@ -1,29 +1,41 @@
-.to-top {
-  opacity: 0; /* Элементы скрыты */
-  transform: translateY(-50px); /* Смещены вверх */
-  will-change: transform, opacity; /* Оптимизация для плавности */
+.no-touch {
+  .to-top {
+    opacity: 0; /* Элементы скрыты */
+    transform: translateY(-50px); /* Смещены вверх */
+    will-change: transform, opacity; /* Оптимизация для плавности */
+  }
+
+  .to-animate {
+    opacity: 0; /* Изначально текст невидим */
+    transform: translateY(20px); /* Смещен вниз */
+    will-change: transform, opacity; /* Оптимизация для анимации */
+  }
+
+  .hidden-text-container {
+    position: relative;
+    overflow: hidden;
+    clip-path: inset(100% 0px 0px);
+  }
+
+  .animate-image {
+    transition: 1s;
+  }
+
+  .slick-current {
+    .slider-slide-container {
+      animation: slide 0.8s ease forwards;
+    }
+  }
+
+  .slider-slide-container {
+  }
 }
 
-.to-animate {
-  opacity: 0; /* Изначально текст невидим */
-  transform: translateY(20px); /* Смещен вниз */
-  will-change: transform, opacity; /* Оптимизация для анимации */
-}
-
-.hidden-text-container {
-  position: relative;
-  overflow: hidden;
-}
-
-.name{
-  //height: 0px;
-  //transform-origin: bottom;
-}
-
-.text {
-  font-size: 3rem; /* Текст крупный */
-  margin: 0;
-  text-align: center;
-  color: #fff;
-  line-height: 100px;
+@keyframes slide {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    clip-path: inset(0 0% 0 0);
+  }
 }

@@ -1,18 +1,22 @@
 import * as functions from "./modules/functions.js";
 import "./modules/animation.js";
+import "./modules/smoothScroll.js";
 
 // functions.isWebp();
 
 functions.range();
 functions.mobileMenu();
 functions.videoIndexPage();
-functions.smoothScroll();
 
 $('.slider-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    // swipe: false,
+    // speed: 0,
     fade: true,
+    autoplay: true,
+    autoplaySpeed: 8000,
     asNavFor: '.slider-nav'
 });
 $('.slider-nav').slick({
