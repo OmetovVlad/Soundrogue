@@ -16,6 +16,19 @@ export function isWebp() {
 	});
 }
 
+export function mobileMenu(){
+	const mobileBtn = document.querySelector('.mobile_menu_btn');
+	const mobileMenu = document.querySelector('.mobile_menu_wrapper');
+
+	mobileBtn.addEventListener("click", toggleMenu);
+
+	function toggleMenu(){
+		mobileBtn.classList.toggle("active");
+		mobileMenu.classList.toggle("active");
+		document.querySelector('body').classList.toggle("lock");
+	}
+}
+
 export function range(){
 	const ranges = document.querySelectorAll('input[type="range"]');
 	const imagesList = document.querySelectorAll('.viewer .img-list img');
