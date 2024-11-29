@@ -9,3 +9,21 @@
   transform: translateY(20px); /* Смещен вниз */
   will-change: transform, opacity; /* Оптимизация для анимации */
 }
+
+.hidden-text-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.name{
+  //height: 0px;
+  //transform-origin: bottom;
+}
+
+.text {
+  font-size: 3rem; /* Текст крупный */
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  line-height: 100px;
+}

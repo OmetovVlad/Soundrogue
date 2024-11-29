@@ -4,22 +4,15 @@ import {ScrollTrigger} from "gsap/ScrollTrigger.js";
 gsap.registerPlugin(ScrollTrigger);
 
 const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0; // Проверка на touch устройстов
-
-
-const textElement = document.querySelector('.text');
-const render = document.querySelector('.render');
-
+const container = document.querySelector(".hidden-text-container");
 gsap.fromTo(
-    textElement,
-    {
-      transform: 'translateY(-100%)' // Начальная позиция
-    },
-    {
-      duration: 2,
-      transform: 'translateY(0)',
-      ease: 'power4.out',
-    }
+    container,
+    { clipPath: "inset(100% 0 0 0)" }, // Изначально всё скрыто
+    { clipPath: "inset(0% 0 0 0)", duration: 1,  delay: 1, ease: "power2.out" } // Полностью видим
 );
+
+
+const render = document.querySelector('.render');
 
 gsap.fromTo(
     render,
