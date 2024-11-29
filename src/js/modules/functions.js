@@ -77,3 +77,4 @@ export function videoIndexPage(){
 		video.querySelector('iframe').classList.add('active');
 	}
 }
+

@@ -15,7 +15,7 @@ $('.slider-for').slick({
     // swipe: false,
     // speed: 0,
     fade: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 8000,
     asNavFor: '.slider-nav'
 });
