@@ -1,8 +1,11 @@
 #efficiently {
   display: flex;
   align-items: center;
-  padding: 120px 0;
   background-color: #141414;
+  padding: 60px 0;
+  @media (min-width: 992px) {
+    padding: 120px 0;
+  }
   .viewer {
     margin: 32px 0;
     @media (min-width: 992px) {

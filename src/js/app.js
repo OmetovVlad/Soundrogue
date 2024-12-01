@@ -7,16 +7,24 @@ import "./modules/smoothScroll.js";
 functions.range();
 functions.mobileMenu();
 functions.videoIndexPage();
+functions.emailValidation();
+functions.emailSubscribe();
+
+const appHeight = () => {
+    const doc = document.documentElement
+    doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+}
+window.addEventListener('resize', appHeight)
+appHeight()
 
 $('.slider-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    // swipe: false,
-    // speed: 0,
+    adaptiveHeight: true,
     fade: true,
-    autoplay: false,
-    autoplaySpeed: 8000,
+    autoplay: true,
+    autoplaySpeed: 4000,
     asNavFor: '.slider-nav'
 });
 $('.slider-nav').slick({

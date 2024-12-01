@@ -24,6 +24,10 @@
   .slick-current {
     .slider-slide-container {
       animation: slide 0.8s ease forwards;
+      .description {
+        opacity: 1!important;
+        bottom: 24px!important;
+      }
     }
   }
 
@@ -35,5 +39,16 @@
   }
   100% {
     clip-path: inset(0 0% 0 0);
+  }
+}
+
+html:not(.no-touch) {
+  .slick-current {
+    .slider-slide-container {
+      .description {
+        opacity: 1!important;
+        bottom: 24px!important;
+      }
+    }
   }
 }

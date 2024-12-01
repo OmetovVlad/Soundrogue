@@ -51,9 +51,9 @@
       @media (pointer: fine) {
         &:hover {
           a {
-            opacity: 0.5;
+            opacity: 0.5!important;
             &:hover {
-              opacity: 1;
+              opacity: 1!important;
             }
           }
         }

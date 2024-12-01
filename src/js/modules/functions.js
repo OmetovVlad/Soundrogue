@@ -78,3 +78,51 @@ export function videoIndexPage(){
 	}
 }
 
+export function emailValidation() {
+	const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+
+	const input = document.querySelector('#subscribe input.input-text');
+	const emailForm = document.querySelector('#subscribe form');
+
+	function onInput() {
+		if (input.value.length > 0) {
+			if (isEmailValid(input.value)) {
+				emailForm.classList.remove('invalid');
+			}
+		} else {
+			emailForm.classList.remove('invalid');
+		}
+	}
+
+	input.addEventListener('input', onInput);
+
+	function isEmailValid(value) {
+		return EMAIL_REGEXP.test(value);
+	}
+}
+
+export function emailSubscribe() {
+	const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+
+	const button = document.querySelector('#subscribe button');
+	const input = document.querySelector('#subscribe input.input-text');
+	const emailForm = document.querySelector('#subscribe form');
+
+	button.addEventListener('click', subscribe);
+
+	function isEmailValid(value) {
+		return EMAIL_REGEXP.test(value);
+	}
+
+	function subscribe(e) {
+		e.preventDefault();
+		if (isEmailValid(input.value) ) {
+			emailForm.classList.remove('invalid');
+			document.querySelector('#subscribe .title-card span').textContent = 'Thank you!';
+			document.querySelector('#subscribe div.text span').textContent = 'Your submission has been received';
+			document.querySelector('#subscribe .subscribe-form').remove();
+		} else {
+			emailForm.classList.add('invalid');
+		}
+	}
+}

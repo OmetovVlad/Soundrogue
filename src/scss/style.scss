@@ -29,6 +29,10 @@
 
 @import "_footer";
 
+:root {
+  --app-height: 100%;
+}
+
 *{
   outline: none;
   box-sizing: border-box;

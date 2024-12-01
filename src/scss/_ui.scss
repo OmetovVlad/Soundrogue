@@ -1,10 +1,40 @@
 .link {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 1px;
   display: flex;
   text-decoration: none;
   font-size: 16px;
   line-height: 1.5;
   color: #fff;
-  border-bottom: solid 1px #fff;
+  &:before,
+  &:after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+  &:before{
+    right: 0;
+  }
+  &:after{
+    right: 100%;
+    transition-delay: 0.2s;
+  }
+  @media (pointer: fine) {
+    &:hover {
+      &:before {
+        left: 100%;
+      }
+
+      &:after {
+        right: 0;
+      }
+    }
+  }
 }
 
 .button-white-bordered {
@@ -148,7 +178,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 8px;
+  //gap: 8px;
   padding: 60px 24px;
   border-radius: 8px;
   overflow: hidden;
@@ -167,7 +197,7 @@
     left: 0;
     background-size: cover;
     background-position: center top;
-    opacity: 0.5;
+    opacity: 0.75;
     transition: all $animation_speed;
   }
   @media (pointer: fine) {
@@ -187,14 +217,20 @@
   .title-card {
     margin-bottom: 24px;
     span {
-      font-size: 32px;
+      font-size: 24px;
       font-weight: bold;
       line-height: 1.5;
       color: #fff;
+      @media (min-width: 992px) {
+        font-size: 32px;
+      }
     }
   }
   .text {
-    padding-bottom: 48px;
+    padding-bottom: 32px;
+    @media (min-width: 992px) {
+      padding-bottom: 48px;
+    }
     span {
       display: block;
       font-size: 16px;
@@ -243,6 +279,21 @@
   //    opacity: 1;
   //  }
   //}
+}
+
+form {
+  &.invalid {
+    .input-text {
+      border-color: #ff3336;
+    }
+    .input-error {
+      opacity: 1;
+    }
+    .button {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
 }
 
 .button {

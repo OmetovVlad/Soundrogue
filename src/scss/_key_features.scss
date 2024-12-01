@@ -7,6 +7,42 @@
     align-items: center;
   }
 
+  .container {
+    .row {
+      flex-direction: column;
+      @media (min-width: 1200px) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  .wrapper_slider {
+    @media (min-width: 1200px) {
+      width: 828px;
+      height: 752px;
+    }
+    .slider-slide-container {
+      width: 100%;
+      @media (min-width: 992px) {
+        width: 804px;
+      }
+    }
+  }
+
+  .wrapper_slider-nav {
+    width: 100%;
+    @media (min-width: 1200px) {
+      align-items: start;
+      width: calc(100% - 828px);
+      margin-top: 96px;
+    }
+    @media (min-width: 1400px) {
+      margin-top: 96px;
+      align-items: end;
+      margin-bottom: 27px;
+    }
+  }
+
   .title-mini {
     margin-bottom: 32px;
     padding-top: 0;
@@ -20,8 +56,8 @@
     width: calc(100% + 16px);
     margin: 16px -8px 0;
     @media (min-width: 1200px) {
-      width: auto;
-      margin: 0;
+      width: 100%;
+      margin: 0 ;
     }
 
     .slick-list {
@@ -34,7 +70,7 @@
     }
 
     .slider-title {
-      font-size: 32px;
+      font-size: 20px;
       font-weight: bold;
       font-stretch: normal;
       font-style: normal;
@@ -45,7 +81,9 @@
       opacity: 0.5;
       transition: all $animation_speed;
       display: none;
-
+      @media (min-width: 1400px) {
+        font-size: 32px;
+      }
       @media (min-width: 1200px) {
         display: block;
       }
@@ -104,12 +142,6 @@
     align-items: end;
   }
 
-  .slider-nav {
-    @media (min-width: 1200px) {
-      margin-bottom: 27px;
-    }
-  }
-
   .slick-current {
     .slider-title {
       opacity: 1;
@@ -130,17 +162,18 @@
     }
 
     .name {
-      font-size: 32px;
+      font-size: 24px;
       font-weight: bold;
-      opacity: 0.5;
+      opacity: 1;
       transition: all $animation_speed;
-      display: none;
-
+      display: block;
+      margin-bottom: 24px;
+      line-height: 1.5;
       @media (min-width: 1200px) {
-        display: block;
+        display: none;
       }
       span {
-        border-bottom: 0 solid rgba(255, 255, 255, .4);
+        border-bottom: 2px solid rgba(255, 255, 255, 1);
         transition: all $animation_speed;
       }
 
@@ -158,9 +191,13 @@
 
       img,
       video {
+        @media (max-width: 1199px) {
+          width: 100%;
+        }
         @media (min-width: 1200px) {
           height: 100%;
           object-fit: cover;
+          object-position: center;
         }
       }
     }
@@ -170,7 +207,8 @@
       @media (min-width: 768px) {
         margin-top: 0;
         position: absolute;
-        bottom: 24px;
+        opacity: 0;
+        bottom: -100px;
         left: 24px;
         right: 24px;
         display: flex;
@@ -178,6 +216,8 @@
         align-items: end;
         justify-content: space-between;
         gap: 30px;
+        transition: all .5s;
+        transition-delay: .5s;
       }
 
       span {
