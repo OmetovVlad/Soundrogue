@@ -31,14 +31,14 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     }
 
-    // Получение элементтов из .text, и разбиение на отдельные элементы для анимации
-    const textElements = document.querySelectorAll('.text');
-    textElements.forEach((el) => {
-      el.innerHTML = el.textContent
-          .split('')
-          .map(letter => `<span class="letter">${letter}</span>`)
-          .join('');
-    });
+    // // Получение элементтов из .text, и разбиение на отдельные элементы для анимации
+    // const textElements = document.querySelectorAll('.text');
+    // textElements.forEach((el) => {
+    //   el.innerHTML = el.textContent
+    //       .split('')
+    //       .map(letter => `<span class="letter">${letter}</span>`)
+    //       .join('');
+    // });
 
     // Создание таймлайна
     const timeline = gsap.timeline();
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
           letter,
           { clipPath: 'inset(100% 0 0 0)' },
           { clipPath: 'inset(0% 0 0 0)', duration: 1, ease: 'power2.out' },
-          index * 0.1 // Задержка между буквами
+          0.4 + index * 0.1 // Задержка между буквами
       );
     });
 
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
         '.circle',
         { clipPath: 'inset(100% 0 0 0)' },
         { clipPath: 'inset(0% 0 0 0)', duration: 0.5, ease: 'power2.out' },
-        0.4 // Появляется параллельно второй букве MIDI
+        0.4 + 0.4 // Появляется параллельно второй букве MIDI
     );
 
     // // Анимация цифры 9
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
             opacity: '1',
             scale: '1',
             ease: 'power4.out',
-          }
+          }, 0.2
       );
     }
     //  Анимация элементов шапки
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
       y: 0,
       duration: 1,
       ease: "power2.out"
-    }, "+=0.7");
+    }, 0.8);
 
 
     tl.to(".text2", {
