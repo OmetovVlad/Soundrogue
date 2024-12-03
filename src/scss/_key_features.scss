@@ -54,7 +54,7 @@
 
   .slider-nav {
     width: calc(100% + 16px);
-    margin: 16px -8px 0;
+    margin: 32px -8px 0;
     @media (min-width: 1200px) {
       width: 100%;
       margin: 0 ;
@@ -65,8 +65,10 @@
     }
 
     .slick-track {
-      transform: translate3d(0px, 0px, 0px) !important;
       height: auto !important;
+      @media (min-width: 1200px) {
+        transform: translate3d(0px, 0px, 0px) !important;
+      }
     }
 
     .slider-title {
@@ -155,7 +157,10 @@
   .slick-slide {
     border: 0;
     overflow: hidden;
-
+    transition: none!important;
+    @media (min-width: 992px) {
+      transition: opacity 500ms!important;
+    }
     .slider-title {
       padding: 13px 0;
       cursor: pointer;
@@ -187,6 +192,17 @@
       overflow: hidden;
       @media (min-width: 1200px) {
         height: 752px;
+      }
+
+      .point {
+        display: none;
+        position: absolute;
+        transition: all .5s;
+        transition-delay: .25s;
+        @media (min-width: 992px) {
+          display: block;
+          opacity: 0;
+        }
       }
 
       img,

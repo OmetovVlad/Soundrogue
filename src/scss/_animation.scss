@@ -24,6 +24,9 @@
   .slick-current {
     .slider-slide-container {
       animation: slide 0.8s ease forwards;
+      .point {
+        opacity: 1!important;
+      }
       .description {
         opacity: 1!important;
         bottom: 24px!important;

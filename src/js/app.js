@@ -21,15 +21,15 @@ $('.slider-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    adaptiveHeight: true,
+    adaptiveHeight: false,
     fade: true,
     autoplay: true,
     autoplaySpeed: 4000,
     asNavFor: '.slider-nav'
 });
 $('.slider-nav').slick({
-    slidesToShow: 8,
     slidesToScroll: 1,
+    slidesToShow: 8,
     asNavFor: '.slider-for',
     dots: false,
     centerMode: false,
@@ -41,17 +41,44 @@ $('.slider-nav').slick({
         {
             breakpoint: 1199,
             settings: {
-                // slidesToShow: 8,
+                slidesToScroll: 5,
+                slidesToShow: 8,
                 vertical: false,
                 arrows: false,
                 dots: false,
-                variableWidth: true
+            }
+        }, {
+            breakpoint: 991,
+            settings: {
+                slidesToScroll: 5,
+                slidesToShow: 6,
+                vertical: false,
+                arrows: false,
+                dots: false,
+            }
+        }, {
+            breakpoint: 767,
+            settings: {
+                slidesToScroll: 5,
+                slidesToShow: 5,
+                vertical: false,
+                arrows: false,
+                dots: false,
+            }
+        }, {
+            breakpoint: 575,
+            settings: {
+                // slidesToShow: 8,
+                slidesToShow: 4,
+                vertical: false,
+                arrows: false,
+                dots: false,
             }
         }
     ]
 });
 
-$(window).resize(function(){
-    $('.slider-for').slick('refresh');
-    $('.slider-nav').slick('refresh');
-});
+// $(window).resize(function(){
+//     $('.slider-for').slick('refresh');
+//     $('.slider-nav').slick('refresh');
+// });

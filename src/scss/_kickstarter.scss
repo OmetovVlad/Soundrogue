@@ -68,6 +68,14 @@
       }
     }
   }
+
+  &.subscribe_full_width {
+    .shine-card {
+      &:after {
+        background-image: url('/img/subscription-bg-big-hovered.png');
+      }
+    }
+  }
 }
 #software {
   .shine-card {

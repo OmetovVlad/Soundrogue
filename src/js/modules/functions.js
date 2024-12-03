@@ -94,7 +94,9 @@ export function emailValidation() {
 		}
 	}
 
-	input.addEventListener('input', onInput);
+	if (input) {
+		input.addEventListener('input', onInput);
+	}
 
 	function isEmailValid(value) {
 		return EMAIL_REGEXP.test(value);
@@ -108,7 +110,9 @@ export function emailSubscribe() {
 	const input = document.querySelector('#subscribe input.input-text');
 	const emailForm = document.querySelector('#subscribe form');
 
-	button.addEventListener('click', subscribe);
+	if (button) {
+		button.addEventListener('click', subscribe);
+	}
 
 	function isEmailValid(value) {
 		return EMAIL_REGEXP.test(value);
