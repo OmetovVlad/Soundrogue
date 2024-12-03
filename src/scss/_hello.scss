@@ -18,6 +18,8 @@
     @media (min-width: 992px) {
       margin-bottom: 80px;
     }
+
+
     h1 {
       display: block;
       font-size: 62px;
@@ -44,7 +46,14 @@
       @media (min-width: 576px) {
         font-size: 90px;
       }
+
+      .letter{
+        font-size: inherit;
+        font-weight: 700;
+      }
     }
+
+
     .circle {
       width: 32px;
       height: 32px;

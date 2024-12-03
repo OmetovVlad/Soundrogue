@@ -33,15 +33,46 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     }
 
-    const titleHero = document.querySelector(".hidden-text-container");
-    if (titleHero) {
-      gsap.fromTo(
-          titleHero,
-          {clipPath: "inset(100% 0 0 0)"}, // Изначально всё скрыто
-          {clipPath: "inset(0% 0 0 0)", duration: 1, delay: 1, ease: "power2.out"} // Полностью видим
-      );
-    }
+    // Получение элементтов из .text, и разбиение на отдельные элементы для анимации
+    const textElements = document.querySelectorAll('.text');
+    textElements.forEach((el) => {
+      el.innerHTML = el.textContent
+          .split('')
+          .map(letter => `<span class="letter">${letter}</span>`)
+          .join('');
+    });
 
+    // Создание таймлайна
+    const timeline = gsap.timeline();
+
+    // Добавление анимации для каждого элемента. Последней цифре задаем отдельно.
+    document.querySelectorAll('.letter').forEach((letter, index) => {
+      timeline.fromTo(
+          letter,
+          { clipPath: 'inset(100% 0 0 0)' },
+          { clipPath: 'inset(0% 0 0 0)', duration: 1, ease: 'power2.out' },
+          index * 0.1 // Задержка между буквами
+      );
+    });
+
+    // Анимация круга параллельно с текстом MIDI
+    timeline.fromTo(
+        '.circle',
+        { clipPath: 'inset(100% 0 0 0)' },
+        { clipPath: 'inset(0% 0 0 0)', duration: 0.5, ease: 'power2.out' },
+        0.4 // Появляется параллельно второй букве MIDI
+    );
+
+    // Анимация цифры 9
+    timeline.fromTo(
+        '.letter:last-of-type',
+        { clipPath: 'inset(100% 0 0 0)' },
+        { clipPath: 'inset(0% 0 0 0)', duration: 0.5, ease: 'power2.out' },
+        '+=0.4' // Задержка после круга
+    );
+
+
+    // Анимация Картинки
     const render = document.querySelector('.render');
     if (render) {
       gsap.fromTo(
@@ -58,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
       );
     }
-
+    //  Анимация элементов шапки
     const elements = gsap.utils.toArray(".to-top");
     if (elements) {
       const tl = gsap.timeline({delay: 0.1}); // Общая задержка перед началом
@@ -89,7 +120,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const tl = gsap.timeline();
-
 
     tl.to(".text1", {
       opacity: 1,
