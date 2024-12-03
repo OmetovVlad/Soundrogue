@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
       y: 0,
       duration: 0.7,
       ease: "power2.out"
-    }, "+=0");
+    }, 1);
   }else{
     document.documentElement.classList.remove("no-touch");
   }
