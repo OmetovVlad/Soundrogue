@@ -90,23 +90,23 @@ document.addEventListener("DOMContentLoaded", () => {
     //  Анимация элементов шапки
     const elements = gsap.utils.toArray(".to-top");
     if (elements) {
-      const tl = gsap.timeline({delay: 0.1}); // Общая задержка перед началом
+      const tl = gsap.timeline({delay: 0.3}); // Общая задержка перед началом
 
       tl.to(".logo", {
         opacity: 1,
         y: 0,
-        duration: 0,
+        duration: 0.3,
         ease: "power4.out"
-      });
+      }, 0.2);
 
       const menuItems = document.querySelectorAll(".menu a");
       menuItems.forEach((item, index) => {
         tl.to(item, {
           opacity: 1,
           y: 0,
-          duration: 0.1,
+          duration: 0,
           ease: "power4.out"
-        }, `-=${0}`);
+        }, `+=${0.1}`);
       });
 
       tl.to(".support-us", {
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
         y: 0,
         duration: 0.6,
         ease: "power4.out"
-      }, "-=0");
+      }, 1);
     }
 
     const tl = gsap.timeline();
