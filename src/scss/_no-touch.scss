@@ -1,0 +1,22 @@
+@media (min-width: 992px) {
+  .header .menu a,
+  .header .button-white-bordered{
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  #hello .name h1 .letter {
+    clip-path: inset(100% 0px 0px);
+  }
+
+  #hello .render img {
+    opacity: 0;
+    transform: translate(-50%, -50%) translate3d(0px, 0px, 0px) scale(0, 0)
+  }
+
+  #hello .descriptions .left,
+  #hello .descriptions .right {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}

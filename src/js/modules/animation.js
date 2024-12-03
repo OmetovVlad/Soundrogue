@@ -5,10 +5,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0; // Проверка на touch устройстов
 
-
 document.addEventListener("DOMContentLoaded", () => {
   if (!isTouchDevice) {
-    document.documentElement.classList.add("no-touch");
     const animateImage = document.querySelector(".animate-image");
     if (animateImage) {
 
@@ -63,17 +61,17 @@ document.addEventListener("DOMContentLoaded", () => {
         0.4 // Появляется параллельно второй букве MIDI
     );
 
-    // Анимация цифры 9
-    timeline.fromTo(
-        '.letter:last-of-type',
-        { clipPath: 'inset(100% 0 0 0)' },
-        { clipPath: 'inset(0% 0 0 0)', duration: 0.5, ease: 'power2.out' },
-        '+=0.4' // Задержка после круга
-    );
+    // // Анимация цифры 9
+    // timeline.fromTo(
+    //     '.text__2 .letter:last-of-type',
+    //     { clipPath: 'inset(100% 0 0 0)' },
+    //     { clipPath: 'inset(0% 0 0 0)', duration: 0.5, ease: 'power2.out' },
+    //     '+=0.4' // Задержка после круга
+    // );
 
 
     // Анимация Картинки
-    const render = document.querySelector('.render');
+    const render = document.querySelector('.render img');
     if (render) {
       gsap.fromTo(
           render,

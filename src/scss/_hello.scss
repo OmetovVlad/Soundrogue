@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   padding: 158px 0 84px;
-  min-height: 100vh;
   min-height: var(--app-height);
+  min-height: 100vh;
   background-image: radial-gradient(circle at 50% 100%, rgba(158, 0, 255, 0.2), rgba(158, 0, 255, 0) 37%), linear-gradient(to bottom, #0a0a0a, #0a0a0a);
   .name-container{
     overflow: hidden;
@@ -88,9 +88,30 @@
     @media (min-width: 992px) {
       margin-bottom: 80px;
     }
+    .render_img {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      position: absolute;
+      top: 0;
+      left: 0;
+      align-items: center;
+      justify-content: center;
+    }
     img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       display: block;
       width: 100%;
+    }
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      padding-top: 9.1954023%;
     }
   }
   .descriptions {

@@ -2,7 +2,7 @@ import * as functions from "./modules/functions.js";
 import "./modules/animation.js";
 import "./modules/smoothScroll.js";
 
-// functions.isWebp();
+functions.isWebp();
 
 functions.range();
 functions.mobileMenu();

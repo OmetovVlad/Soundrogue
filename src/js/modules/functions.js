@@ -14,6 +14,12 @@ export function isWebp() {
 		let className = support === true ? 'webp' : 'no-webp';
 		document.documentElement.classList.add(className);
 	});
+
+	const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0; // Проверка на touch устройстов
+
+	if (!isTouchDevice) {
+		document.documentElement.classList.add("no-touch");
+	}
 }
 
 export function mobileMenu(){
