@@ -1,10 +1,19 @@
 #key_features {
   padding: 60px 0;
+  opacity: 0;
+  transition: all $animation_speed;
+  @media (max-width: 991px) {
+    opacity: 1!important;
+  }
   @media (min-width: 1200px) {
     padding: 24px 0;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+  }
+
+  &.visible {
+    opacity: 1;
   }
 
   .container {
@@ -186,14 +195,61 @@
     }
 
     .photo {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
       position: relative;
-
       border-radius: 8px;
       overflow: hidden;
       @media (min-width: 1200px) {
         height: 752px;
       }
+      @media (min-width: 1200px) {
+        .timeline {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          right: 10px;
+          height: 4px;
+          border-radius: 5px;
+          overflow: hidden;
 
+          &:before,
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 10px;
+            height: 4px;
+            background: #ffffff;
+            border-radius: 5px;
+          }
+
+          &:before {
+            width: 0;
+          }
+
+          @keyframes timeline-animation {
+            from {
+              width: 0;
+            }
+            to {
+              width: 100%;
+            }
+          }
+
+          &:after {
+            right: 0;
+            opacity: 0.5;
+          }
+        }
+      }
       .point {
         display: none;
         position: absolute;
@@ -209,13 +265,38 @@
       video {
         @media (max-width: 1199px) {
           width: 100%;
+          height: 100%;
         }
         @media (min-width: 1200px) {
           height: 100%;
+          width: 100%;
           object-fit: cover;
           object-position: center;
         }
       }
+    }
+
+    &.slick-active {
+      .photo {
+        .timeline {
+          &:before {
+            animation-name: timeline-animation;
+            animation-duration: 6.5s;
+            animation-timing-function: linear;
+            animation-play-state: running;
+            animation-fill-mode: forwards;
+          }
+        }
+      }
+      //&:hover {
+      //  .photo {
+      //    .timeline {
+      //      &:before {
+      //        animation-play-state: paused;
+      //      }
+      //    }
+      //  }
+      //}
     }
 
     .description {

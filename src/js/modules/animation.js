@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
           letter,
           { clipPath: 'inset(100% 0 0 0)' },
           { clipPath: 'inset(0% 0 0 0)', duration: 1, ease: 'power2.out' },
-          0.4 + index * 0.1 // Задержка между буквами
+          0.3 + index * 0.1 // Задержка между буквами
       );
     });
 
@@ -80,11 +80,11 @@ document.addEventListener("DOMContentLoaded", () => {
             scale: '0.7'
           },
           {
-            duration: 1.5,
+            duration: 1,
             opacity: '1',
             scale: '1',
             ease: 'power4.out',
-          }, 0.2
+          }, 0.1
       );
     }
     //  Анимация элементов шапки
@@ -95,26 +95,26 @@ document.addEventListener("DOMContentLoaded", () => {
       tl.to(".logo", {
         opacity: 1,
         y: 0,
-        duration: 0.3,
+        duration: 0.5,
         ease: "power4.out"
-      }, 0.2);
+      }, 0.1);
 
       const menuItems = document.querySelectorAll(".menu a");
       menuItems.forEach((item, index) => {
         tl.to(item, {
           opacity: 1,
           y: 0,
-          duration: 0,
+          duration: 0.2,
           ease: "power4.out"
-        }, `+=${0.1}`);
+        }, 0.1 + 0.05 * index); //`+=${0.1}`
       });
 
       tl.to(".support-us", {
         opacity: 1,
         y: 0,
-        duration: 0.6,
+        duration: 0.5,
         ease: "power4.out"
-      }, 1);
+      }, 0.5);
     }
 
     const tl = gsap.timeline();
@@ -122,17 +122,17 @@ document.addEventListener("DOMContentLoaded", () => {
     tl.to(".text1", {
       opacity: 1,
       y: 0,
-      duration: 1,
+      duration: 0.3,
       ease: "power2.out"
-    }, 0.8);
+    }, 0.5);
 
 
     tl.to(".text2", {
       opacity: 1,
       y: 0,
-      duration: 0.7,
+      duration: 0.3,
       ease: "power2.out"
-    }, 1);
+    }, 0.8);
   }else{
     document.documentElement.classList.remove("no-touch");
   }

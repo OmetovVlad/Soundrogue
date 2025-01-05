@@ -19,6 +19,8 @@ export function isWebp() {
 
 	if (!isTouchDevice) {
 		document.documentElement.classList.add("no-touch");
+	} else {
+		document.documentElement.classList.add("touch");
 	}
 }
 

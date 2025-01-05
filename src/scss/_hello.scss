@@ -100,18 +100,15 @@
       justify-content: center;
     }
     img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
       display: block;
+      transform: translate(0, 0);
       width: 100%;
     }
     &:before {
       content: '';
       display: block;
       width: 100%;
-      padding-top: 9.1954023%;
+      padding-top: 9.21875%;
     }
   }
   .descriptions {

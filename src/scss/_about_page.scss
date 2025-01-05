@@ -81,7 +81,20 @@
   .photo {
     overflow: hidden;
     border-radius: 8px;
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      position: relative;
+      width: 100%;
+      padding-top: 93.5162095%;
+    }
     img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       display: block;
       width: 100%;
     }
@@ -169,10 +182,23 @@
   .photo {
     overflow: hidden;
     border-radius: 8px;
+    position: relative;
     @media (max-width: 991px) {
       margin-bottom: 32px;
     }
+    &:before {
+      content: '';
+      display: block;
+      position: relative;
+      width: 100%;
+      padding-top: 93.5162095%;
+    }
     img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       display: block;
       width: 100%;
     }

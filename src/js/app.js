@@ -17,14 +17,17 @@ const appHeight = () => {
 window.addEventListener('resize', appHeight)
 appHeight()
 
+    // autoplay: true,
+    // autoplaySpeed: 4000,
+
 $('.slider-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     adaptiveHeight: false,
     fade: true,
-    autoplay: true,
-    autoplaySpeed: 4000,
+    pauseOnFocus: false,
+    pauseOnHover: false,
     asNavFor: '.slider-nav'
 });
 $('.slider-nav').slick({
@@ -77,6 +80,25 @@ $('.slider-nav').slick({
         }
     ]
 });
+
+const sliderBlock = document.querySelector('#key_features');
+
+if (sliderBlock) {
+    document.addEventListener('scroll', onScroll);
+
+    function onScroll() {
+        const posTop = sliderBlock.getBoundingClientRect().top;
+
+        if (posTop + sliderBlock.clientHeight <= window.innerHeight && posTop >= 0) {
+            sliderBlock.classList.add('visible');
+            $('.slider-for').slick('slickSetOption', {
+                autoplay: true,
+                autoplaySpeed: 6000,
+            }, true);
+            document.removeEventListener('scroll', onScroll);
+        }
+    }
+}
 
 // $(window).resize(function(){
 //     $('.slider-for').slick('refresh');

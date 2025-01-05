@@ -1,4 +1,4 @@
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .header .logo,
   .header .menu a,
   .header .button-white-bordered{
@@ -13,12 +13,37 @@
 
   #hello .render img {
     opacity: 0;
-    transform: translate(-50%, -50%) translate3d(0px, 0px, 0px) scale(0, 0)
+    transform: translate(0, 0) translate3d(0px, 0px, 0px) scale(0, 0)
   }
 
   #hello .descriptions .left,
   #hello .descriptions .right {
     opacity: 0;
     transform: translateY(20px);
+  }
+}
+
+.touch {
+  .header .logo,
+  .header .menu a,
+  .header .button-white-bordered{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  #hello .name .circle,
+  #hello .name h1 .letter {
+    clip-path: inset(0% 0px 0px);
+  }
+
+  #hello .render img {
+    opacity: 1;
+    transform: scale(1)
+  }
+
+  #hello .descriptions .left,
+  #hello .descriptions .right {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
