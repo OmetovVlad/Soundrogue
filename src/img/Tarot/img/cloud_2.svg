@@ -1,0 +1,21 @@
+<svg width="166" height="510" viewBox="0 0 166 510" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.3" clip-path="url(#clip0_93_4020)">
+<circle cx="85" cy="85" r="85" transform="matrix(0 -1 -1 0 99 595)" fill="#574B64"/>
+<circle cx="85" cy="85" r="85" transform="matrix(0 -1 -1 0 99 425)" fill="#574B64"/>
+<circle cx="85" cy="85" r="85" transform="matrix(0 -1 -1 0 127 425)" fill="#574B64"/>
+<circle cx="85" cy="85" r="85" transform="matrix(0 -1 -1 0 139 425)" fill="#574B64"/>
+<circle cx="85" cy="85" r="85" transform="matrix(0 -1 -1 0 99 255)" fill="#574B64"/>
+<circle cx="85" cy="85" r="85" transform="matrix(0 -1 -1 0 166 316)" fill="#574B64"/>
+<circle cx="85" cy="85" r="85" transform="matrix(0 -1 -1 0 127 501)" fill="#574B64"/>
+<circle cx="85" cy="85" r="85" transform="matrix(0 -1 -1 0 106 486)" fill="#574B64"/>
+<circle cx="85" cy="85" r="85" transform="matrix(0 -1 -1 0 127 495)" fill="#574B64"/>
+<circle cx="85" cy="85" r="85" transform="matrix(0 -1 -1 0 139 521)" fill="#574B64"/>
+<circle cx="85" cy="85" r="85" transform="matrix(0 -1 -1 0 166 184)" fill="#574B64"/>
+<circle cx="85" cy="85" r="85" transform="matrix(0 -1 -1 0 99 85)" fill="#574B64"/>
+</g>
+<defs>
+<clipPath id="clip0_93_4020">
+<rect width="510" height="166" fill="white" transform="matrix(0 1 -1 0 166 0)"/>
+</clipPath>
+</defs>
+</svg>

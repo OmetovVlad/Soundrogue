@@ -1,0 +1,30 @@
+<svg width="1440" height="549" viewBox="0 0 1440 549" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_93_6617)">
+<path d="M1532 829.5C1532 999.361 1441.26 1153.21 1294.42 1264.63C1147.58 1376.06 944.667 1445 720.5 1445C496.333 1445 293.425 1376.06 146.58 1264.63C-0.263435 1153.21 -91 999.361 -91 829.5C-91 659.639 -0.263435 505.786 146.58 394.365C293.425 282.944 496.333 214 720.5 214C944.667 214 1147.58 282.944 1294.42 394.365C1441.26 505.786 1532 659.639 1532 829.5Z" stroke="#EED5A9" stroke-width="2"/>
+<circle cx="269" cy="318" r="29" stroke="#EED5A9" stroke-width="2"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M299.563 386.643C325.735 375.01 344 348.652 344 318C344 276.579 310.646 243 269.5 243C256.418 243 244.123 246.395 233.438 252.357C242.632 248.27 252.803 246 263.5 246C304.646 246 338 279.579 338 321C338 349.251 322.484 373.854 299.563 386.643Z" fill="#D6B037"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M449.679 326.085C490.055 316.838 515.29 276.61 506.043 236.234C496.795 195.858 456.568 170.624 416.192 179.871C403.56 182.764 392.411 188.689 383.336 196.702C414.506 199.808 441.616 222.387 448.995 254.608C455.35 282.353 445.422 310.027 425.488 327.628C433.376 328.414 441.525 327.953 449.679 326.085Z" fill="#D6B037"/>
+<circle cx="434" cy="253" r="59" stroke="#EED5A9" stroke-width="2"/>
+<circle cx="30" cy="30" r="29" transform="matrix(-1 0 0 1 1200.43 288.162)" stroke="#EED5A9" stroke-width="2"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1139.86 386.805C1113.69 375.171 1095.43 348.814 1095.43 318.162C1095.43 276.74 1128.78 243.162 1169.93 243.162C1183.01 243.162 1195.3 246.556 1205.99 252.519C1196.79 248.431 1186.62 246.162 1175.93 246.162C1134.78 246.162 1101.43 279.74 1101.43 321.162C1101.43 349.413 1116.94 374.016 1139.86 386.805Z" fill="#D6B037"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M989.742 326.248C949.367 316.998 924.135 276.769 933.384 236.394C942.634 196.018 982.863 170.786 1023.24 180.036C1035.87 182.929 1047.02 188.855 1056.09 196.868C1024.92 199.973 997.812 222.55 990.431 254.771C984.075 282.515 994.001 310.19 1013.93 327.792C1006.05 328.577 997.897 328.116 989.742 326.248Z" fill="#D6B037"/>
+<circle cx="60" cy="60" r="59" transform="matrix(-1 0 0 1 1065.43 193.162)" stroke="#EED5A9" stroke-width="2"/>
+<circle cx="720" cy="217" r="350" fill="url(#paint0_radial_93_6617)"/>
+<circle cx="720" cy="209" r="104" stroke="#EED5A9" stroke-width="2"/>
+<circle cx="720" cy="209" r="90" fill="url(#paint1_radial_93_6617)"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_93_6617" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(720 217) rotate(90) scale(350)">
+<stop offset="0.399422" stop-color="#F8D2CB" stop-opacity="0.22"/>
+<stop offset="0.68839" stop-color="#BD988D" stop-opacity="0.12"/>
+<stop offset="0.995417" stop-color="#8E897F" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint1_radial_93_6617" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(720 209) rotate(90) scale(90)">
+<stop stop-color="#EBEBEB"/>
+<stop offset="1" stop-color="#FBE4B7"/>
+</radialGradient>
+<clipPath id="clip0_93_6617">
+<rect width="1440" height="549" fill="white"/>
+</clipPath>
+</defs>
+</svg>
